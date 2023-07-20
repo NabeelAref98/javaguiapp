@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="570.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.wgu.software2.controllers.ReportController">
+    <TabPane prefHeight="570.0" prefWidth="1184.0" tabClosingPolicy="UNAVAILABLE">
+        <Tab text="types &amp; month">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="542.0" prefWidth="1304.0" styleClass="mainTabBg">
+                <Button fx:id="typeHomeBtn" layoutX="34.0" layoutY="508.0" mnemonicParsing="false" onAction="#onHome" styleClass="exitBtn" text="Back" />
+            <TableView fx:id="appointment_Table_type" layoutX="14.0" layoutY="14.0" prefHeight="434.0" prefWidth="1156.0">
+               <columns>
+                  <TableColumn fx:id="appointment_Id" prefWidth="48.000000953674316" text="Id" />
+                  <TableColumn fx:id="appointment_Title" prefWidth="172.8000144958496" text="title" />
+                  <TableColumn fx:id="appointment_Description" prefWidth="110.0" text="description" />
+                  <TableColumn fx:id="appointment_Location" prefWidth="110.0" text="location" />
+                  <TableColumn fx:id="appointment_Contact" prefWidth="110.0" styleClass="centerText" text="contact" />
+                  <TableColumn fx:id="appointment_Type" prefWidth="110.0" text="type" />
+                  <TableColumn fx:id="appointment_Start" prefWidth="150.0" text="start time and date" />
+                  <TableColumn fx:id="appointment_End" prefWidth="150.0" text="end time and date" />
+                  <TableColumn fx:id="appointment_UserId" prefWidth="77.5999755859375" styleClass="centerText" text="user " />
+                  <TableColumn fx:id="appointment_CustomerId" prefWidth="143.2000732421875" styleClass="centerText" text="customer" />
+               </columns>
+            </TableView>
+            <ComboBox fx:id="appointment_type_combo" layoutX="21.0" layoutY="470.0" onAction="#onTypesChange" prefWidth="150.0" promptText="types" />
+            <ComboBox fx:id="appointment_month_combo" layoutX="180.0" layoutY="470.0" onAction="#onMonthChange" prefWidth="150.0" promptText="months" />
+            <Label fx:id="total_label" layoutX="342.0" layoutY="474.0" text="Total:" />
+            </AnchorPane>
+         <styleClass>
+            <String fx:value="blueBtn" />
+            <String fx:value="typeTab" />
+         </styleClass>
+        </Tab>
+        <Tab styleClass="greenBtn" text="Contacts">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="mainTabBg">
+                <Button fx:id="userHomeBtn" layoutX="18.0" layoutY="502.0" mnemonicParsing="false" onAction="#onHome" styleClass="exitBtn" text="back" />
+            <TableView fx:id="appointment_Table_contact" layoutX="14.0" layoutY="25.0" prefHeight="434.0" prefWidth="1156.0">
+               <columns>
+                  <TableColumn fx:id="appointment_Id_contacts" prefWidth="48.000000953674316" text="Id" />
+                  <TableColumn fx:id="appointment_Title_contacts" prefWidth="172.8000144958496" text="title" />
+                  <TableColumn fx:id="appointment_Description_contacts" prefWidth="110.0" text="description" />
+                  <TableColumn fx:id="appointment_Contact_contacts" prefWidth="110.0" styleClass="centerText" text="contact" />
+                  <TableColumn fx:id="appointment_Type_contacts" prefWidth="110.0" text="type" />
+                  <TableColumn fx:id="appointment_Start_contacts" prefWidth="150.0" text="start time and date" />
+                  <TableColumn fx:id="appointment_End_contacts" prefWidth="150.0" text="end time and date" />
+                  <TableColumn fx:id="appointment_CustomerId_contacts" prefWidth="143.2000732421875" styleClass="centerText" text="customer" />
+               </columns>
+            </TableView>
+            <ComboBox fx:id="contact_combo" layoutX="18.0" layoutY="470.0" onAction="#onContactsChange" prefWidth="150.0" promptText="contacts" />
+            <Label fx:id="total_contacts" layoutX="181.0" layoutY="474.0" text="total:" />
+            </AnchorPane>
+        </Tab>
+        <Tab text="Customers">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="442.0" prefWidth="1058.0" styleClass="mainTabBg">
+                <Button fx:id="contactHomeBtn" layoutX="29.0" layoutY="502.0" mnemonicParsing="false" onAction="#onHome" styleClass="exitBtn" text="back" />
+            <Label fx:id="contactNameLabel" layoutX="489.0" layoutY="26.0" textFill="#eeeeee">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="countries_Text" editable="false" layoutX="60.0" layoutY="40.0" prefHeight="442.0" prefWidth="1082.0" />
+            </AnchorPane>
+         <styleClass>
+            <String fx:value="deleteBtn" />
+            <String fx:value="scheduleTab" />
+         </styleClass>
+        </Tab>
+    </TabPane>
+</AnchorPane>
