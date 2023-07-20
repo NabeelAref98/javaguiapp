@@ -1,17 +1,13 @@
 Scheduling Application
 
-the purpose of the application-
-• Application connects and sends queries to the database, and handles exceptions
-• Inserts, updates and searches for records in the database to view them in the application
-• ability to view 3 reports of the application
-• login and security with logger capabilities
-• can detect localization and produce french for the login page
-• more than 2 lambda expressions (provided in the code)
-• uses libraries such as javafx and mysql-connector
-
-Developer: Nabeel Aref
-Email:  naref3@wgu.edu
-Date: Feb, 7 2023
+The purpose of the Application:
+- • Application connects and sends queries to the database, and handles exceptions
+- • Inserts, updates and searches for records in the database to view them in the application
+- • ability to view 3 reports of the application
+- • login and security with logger capabilities
+- • can detect localization and produce french for the login page
+- • more than 2 lambda expressions (provided in the code)
+- • uses libraries such as javafx and mysql-connector
 
 software, tools and library versions:
 • intellij 2022.1.1 Build #IU•221.5591.52
